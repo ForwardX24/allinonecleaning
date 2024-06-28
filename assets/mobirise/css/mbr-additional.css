@@ -1612,6 +1612,18 @@ section.lazy-placeholder:after {
   position: absolute;
   top: 0;
 }
+#custom-html-12 {
+  /* Type valid CSS here */
+}
+#custom-html-12 div {
+  padding: 80px 0;
+  color: #777;
+  text-align: center;
+}
+#custom-html-12 p {
+  font-size: 60px;
+  color: #777;
+}
 .cid-ugakfinPnZ {
   padding-top: 60px;
   padding-bottom: 45px;
