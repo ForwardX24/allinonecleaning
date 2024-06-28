@@ -39,7 +39,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 39,
+    "uniqCompNum": 40,
     "versionPublish": "5.9.18",
     "screenshot": "screenshot.png",
     "mcSmartCart": {
@@ -1686,7 +1686,9 @@
           "_anchor": "form02-i"
         },
         {
-          "alias": false,
+          "_name": "footer2",
+          "_sourceTheme": "tutorm5",
+          "_customHTML": "<section class=\"tutorm5 footer2\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n\t\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n\t\t<input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Logo\" name=\"showLogo\">\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Copyright\" name=\"showCopy\" checked>\n\t\t<header>Social</header>\n\t\t<input type=\"range\" name=\"socialCount\" title=\"Social Count\" min=\"0\" max=\"4\" step=\"1\" value=\"3\">\n\t\t<input type=\"color\" title=\"Social Color\" value=\"#ffffff\" name=\"social\" selected>\n\t\t<header>Lists</header>\n\t\t<input type=\"checkbox\" title=\"List Title\" name=\"showListTitle\" checked>\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#13287d\" selected>\n\t\t</fieldset>\n\t\t<header condition=\"bg.type === 'video'\">Fallback Image</header>\n\t\t<input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n\t</mbr-parameters>\n\n\t<div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n\t\t<div class=\"row\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n\t\t\t<div class=\"col-12 col-lg-4 card\">\n\t\t\t\t<div class=\"content-wrapper\">\n\t\t\t\t\t<div class=\"title-wrapper\" mbr-if=\"showLogo || showTitle\">\n\t\t\t\t\t\t<div class=\"title-wrap\">\n\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/screenshot_2024-06-15_at_19.22.25-2.webp\" alt=\"Mobirise\" mbr-if=\"showLogo\">\n\t\t\t\t\t\t\t<h2 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title, .title-wrapper, .social-wrapper\">All in one cleaning</h2>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p class=\"copyright mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showCopy\" data-app-selector=\".copyright\">Copyright 2024 All in one cleaning<br>All Rights Reserved\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\n\t\t\t</div>\n\t\t\t<div class=\"col-12 col-lg-4 col-md-6\">\n\t\t\t\t<div class=\"list-wrapper\">\n\t\t\t\t\t<h4 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showListTitle\" data-app-selector=\".mbr-card-title\"><b>Adres</b></h4>\n\t\t\t\t\t<ul class=\"list mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".list\" data-multiline mbr-article>\n\t\t\t\t\t\t<li class=\"item-wrap\">Het oosterveld 58</li><li class=\"item-wrap\">7544 EL, Enschede</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-12 col-lg-4 col-md-6\">\n\t\t\t\t<div class=\"list-wrapper\">\n\t\t\t\t\t<h4 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showListTitle\" data-app-selector=\".mbr-card-title\"><b>Contact</b></h4>\n\t\t\t\t\t<ul class=\"list mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".list\" data-multiline mbr-article>\n\t\t\t\t\t\t<li class=\"item-wrap\">cleaningallinone@hotmail.com</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"social-wrapper pt-1\">\n\t\t\t\t\t<div class=\"social-wrap\">\n\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-telegram socicon\" mbr-if=\"socialCount > 0\"></span>\n\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon socicon-twitter\" mbr-if=\"socialCount > 1\"></span>\n\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-vkontakte socicon\" mbr-if=\"socialCount > 2\"></span>\n\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon socicon-instagram\" mbr-if=\"socialCount > 3\"></span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\n\t\t</div>\n\t</div>\n</section>",
           "_styles": {
             "& when not (@fullScreen)": {
               "padding-top": "(@paddingTop * 1rem)",
@@ -1717,116 +1719,107 @@
               ".container-fluid": {
                 "padding": "0 40px",
                 "@media (max-width: 992px)": {
-                  "padding": "0 20px"
+                  "padding": "0 16px"
                 }
               }
             },
             ".container": {
               "@media (max-width: 992px)": {
-                "padding": "0 20px"
+                "padding": "0 16px"
               }
             },
-            ".row": {
-              "justify-content": "center"
-            },
-            ".logo-wrapper": {
-              "margin-bottom": "60px",
+            ".card": {
+              "display": "flex",
+              "flex-direction": "column",
+              "justify-content": "space-between",
               "@media (max-width: 992px)": {
                 "margin-bottom": "40px"
               },
-              "img": {
-                "display": "inline-flex",
-                "width": "200px",
-                "height": "75px",
-                "object-fit": "cover"
-              },
-              "a": {
-                "display": "inline-flex"
-              }
-            },
-            ".content-wrapper": {
-              "display": "grid",
-              "grid-template-columns": "1fr 1fr",
-              "gap": "30px",
-              "margin-bottom": "60px",
-              "@media (max-width: 992px)": {
-                "display": "block",
-                "margin-bottom": "0"
-              },
-              ".list-wrapper": {
-                "@media (max-width: 992px)": {
-                  "margin-bottom": "40px"
-                },
-                ".list": {
-                  "padding": "0",
-                  "margin": "0",
-                  "list-style-type": "none",
-                  "display": "inline-flex",
-                  "flex-direction": "column",
-                  ".item-wrap": {
-                    "display": "inline-block",
-                    "width": "fit-content",
-                    "position": "relative",
-                    "margin-bottom": "10px",
-                    "opacity": ".6",
-                    "cursor": "pointer",
-                    "&:last-child": {
+              ".content-wrapper": {
+                ".title-wrapper": {
+                  ".title-wrap": {
+                    "display": "inline-flex",
+                    "align-items": "center",
+                    "margin-bottom": "16px",
+                    "@media (max-width: 992px)": {
+                      "margin-bottom": "40px"
+                    },
+                    "img": {
+                      "width": "42px",
+                      "height": "42px",
+                      "object-fit": "contain",
+                      "margin-right": "1rem"
+                    },
+                    ".mbr-section-title": {
                       "margin-bottom": "0"
-                    },
-                    "&::before": {
-                      "content": "''",
-                      "position": "absolute",
-                      "bottom": "0",
-                      "left": "0",
-                      "height": "1px",
-                      "width": "0",
-                      "background-color": "@border",
-                      "transition": "all 0.3s ease-in-out",
-                      "opacity": ".6"
-                    },
-                    "&:focus, &:hover": {
-                      "&::before": {
-                        "width": "100%"
-                      }
                     }
+                  }
+                },
+                ".copyright": {
+                  "margin-bottom": "20px",
+                  "@media (max-width: 992px)": {
+                    "margin-bottom": "40px"
+                  }
+                }
+              },
+              ".social-wrapper": {
+                ".social-wrap": {
+                  "display": "inline-flex",
+                  "flex-wrap": "wrap",
+                  ".mbr-iconfont": {
+                    "font-size": "20px",
+                    "margin-right": "48px",
+                    "color": "@social"
                   }
                 }
               }
             },
-            ".border-wrap": {
-              "height": "1px",
-              "width": "100%",
-              "opacity": ".2",
-              "background-color": "@border"
-            },
-            ".copy-wrapper": {
-              ".mbr-copy": {
-                "padding": "30px 0 40px",
-                "margin-bottom": "0",
-                "opacity": ".4"
+            ".social-wrapper": {
+              ".social-wrap": {
+                "display": "inline-flex",
+                "flex-wrap": "wrap",
+                ".mbr-iconfont": {
+                  "font-size": "20px",
+                  "margin-right": "28px",
+                  "color": "@social"
+                }
               }
+            },
+            ".list-wrapper": {
+              ".mbr-card-title": {
+                "margin-bottom": "16px"
+              },
+              ".list": {
+                "margin": "0",
+                "padding": "0",
+                "list-style-type": "none",
+                ".item-wrap": {
+                  "margin-bottom": "16px"
+                },
+                "@media (max-width: 992px)": {
+                  "margin-bottom": "40px"
+                }
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#ffffff"
+            },
+            ".copyright": {
+              "color": "#ffffff"
+            },
+            ".mbr-card-title": {
+              "color": "#ffffff"
             },
             ".list": {
               "color": "#ffffff"
-            },
-            ".mbr-copy": {
-              "color": "#ffffff"
-            },
-            ".list, .item-wrap, .list-wrapper": {
-              "color": "#14287f"
             }
           },
-          "_name": "footer01",
-          "_sourceTheme": "placem5",
-          "_customHTML": "<section class=\"footer01 placem5\" group=\"Footer\" global once=\"footers\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"12\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"12\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Logo\" name=\"showLogo\" checked>\n        <input type=\"checkbox\" title=\"Social\" name=\"showSoc\" checked>\n        <input type=\"checkbox\" title=\"Contacts\" name=\"showContacts\" checked>\n        <input type=\"checkbox\" title=\"Border\" name=\"showBorder\" checked>\n        <input type=\"color\" title=\"Border Color\" value=\"#ffffff\" name=\"border\" selected>\n        <input type=\"checkbox\" title=\"Copyright\" name=\"showCopy\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/placem5/components/_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/placem5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n            <div class=\"col-12 col-lg-7\">\n                <div class=\"logo-wrapper\" mbr-if=\"showLogo\">\n                    <a href=\"#\"><img src=\"@PROJECT_PATH@/assets/images/screenshot-2024-06-15-at-19.22.25-2.webp\" alt=\"Mobirise\"></a>\n                </div>\n            </div>\n            <div class=\"col-lg-4\">\n                <div class=\"content-wrapper\" mbr-if=\"showContacts || showSoc\">\n                    <div class=\"list-wrapper\" mbr-if=\"showSoc\">\n                        <ul class=\"list mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".list, .item-wrap, .list-wrapper\" data-multiline mbr-article>\n                            <li class=\"item-wrap\"><b>Diensten</b></li>\n                            <li class=\"item-wrap\"><b>Over ons </b></li><li class=\"item-wrap\"><b>Offer<span style=\"font-size: 1.15rem;\">te</span></b></li>\n                        </ul>\n                    </div>\n                    <div class=\"list-wrapper\" mbr-if=\"showContacts\">\n                        <ul class=\"list mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".list, .item-wrap, .list-wrapper\" data-multiline mbr-article>\n                            <li class=\"item-wrap\">+31658947413</li><li class=\"item-wrap\">cleaningallinone@hotmail.com</li>\n                        </ul>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-12\">\n                <div class=\"border-wrap\" mbr-if=\"showBorder\"></div>\n            </div>\n            <div class=\"col-12 col-lg-11\">\n                <div class=\"copy-wrapper\">\n                    <p class=\"mbr-copy mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showCopy\" data-app-selector=\".mbr-copy, .logo-wrapper\">\n                        © Copyright 2030 Mobirise - All Rights Reserved\n                    </p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "ugZbiqSkSp",
+          "_cid": "uh08g5thr6",
           "_protectedParams": [],
           "_global": true,
           "_once": "footers",
           "_params": {},
-          "_anchor": "footer01-g",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": []
+          "_anchor": "footer2-13"
         }
       ]
     },
@@ -3066,7 +3059,9 @@
           "_params": {}
         },
         {
-          "alias": false,
+          "_name": "footer2",
+          "_sourceTheme": "tutorm5",
+          "_customHTML": "<section class=\"tutorm5 footer2\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n\t\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n\t\t<input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Logo\" name=\"showLogo\">\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Copyright\" name=\"showCopy\" checked>\n\t\t<header>Social</header>\n\t\t<input type=\"range\" name=\"socialCount\" title=\"Social Count\" min=\"0\" max=\"4\" step=\"1\" value=\"3\">\n\t\t<input type=\"color\" title=\"Social Color\" value=\"#ffffff\" name=\"social\" selected>\n\t\t<header>Lists</header>\n\t\t<input type=\"checkbox\" title=\"List Title\" name=\"showListTitle\" checked>\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#13287d\" selected>\n\t\t</fieldset>\n\t\t<header condition=\"bg.type === 'video'\">Fallback Image</header>\n\t\t<input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n\t</mbr-parameters>\n\n\t<div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n\t\t<div class=\"row\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n\t\t\t<div class=\"col-12 col-lg-4 card\">\n\t\t\t\t<div class=\"content-wrapper\">\n\t\t\t\t\t<div class=\"title-wrapper\" mbr-if=\"showLogo || showTitle\">\n\t\t\t\t\t\t<div class=\"title-wrap\">\n\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/screenshot_2024-06-15_at_19.22.25-2.webp\" alt=\"Mobirise\" mbr-if=\"showLogo\">\n\t\t\t\t\t\t\t<h2 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title, .title-wrapper, .social-wrapper\">All in one cleaning</h2>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p class=\"copyright mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showCopy\" data-app-selector=\".copyright\">Copyright 2024 All in one cleaning<br>All Rights Reserved\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\n\t\t\t</div>\n\t\t\t<div class=\"col-12 col-lg-4 col-md-6\">\n\t\t\t\t<div class=\"list-wrapper\">\n\t\t\t\t\t<h4 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showListTitle\" data-app-selector=\".mbr-card-title\"><b>Adres</b></h4>\n\t\t\t\t\t<ul class=\"list mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".list\" data-multiline mbr-article>\n\t\t\t\t\t\t<li class=\"item-wrap\">Het oosterveld 58</li><li class=\"item-wrap\">7544 EL, Enschede</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-12 col-lg-4 col-md-6\">\n\t\t\t\t<div class=\"list-wrapper\">\n\t\t\t\t\t<h4 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showListTitle\" data-app-selector=\".mbr-card-title\"><b>Contact</b></h4>\n\t\t\t\t\t<ul class=\"list mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".list\" data-multiline mbr-article>\n\t\t\t\t\t\t<li class=\"item-wrap\">cleaningallinone@hotmail.com</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"social-wrapper pt-1\">\n\t\t\t\t\t<div class=\"social-wrap\">\n\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-telegram socicon\" mbr-if=\"socialCount > 0\"></span>\n\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon socicon-twitter\" mbr-if=\"socialCount > 1\"></span>\n\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-vkontakte socicon\" mbr-if=\"socialCount > 2\"></span>\n\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon socicon-instagram\" mbr-if=\"socialCount > 3\"></span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\n\t\t</div>\n\t</div>\n</section>",
           "_styles": {
             "& when not (@fullScreen)": {
               "padding-top": "(@paddingTop * 1rem)",
@@ -3097,116 +3092,107 @@
               ".container-fluid": {
                 "padding": "0 40px",
                 "@media (max-width: 992px)": {
-                  "padding": "0 20px"
+                  "padding": "0 16px"
                 }
               }
             },
             ".container": {
               "@media (max-width: 992px)": {
-                "padding": "0 20px"
+                "padding": "0 16px"
               }
             },
-            ".row": {
-              "justify-content": "center"
-            },
-            ".logo-wrapper": {
-              "margin-bottom": "60px",
+            ".card": {
+              "display": "flex",
+              "flex-direction": "column",
+              "justify-content": "space-between",
               "@media (max-width: 992px)": {
                 "margin-bottom": "40px"
               },
-              "img": {
-                "display": "inline-flex",
-                "width": "200px",
-                "height": "75px",
-                "object-fit": "cover"
-              },
-              "a": {
-                "display": "inline-flex"
-              }
-            },
-            ".content-wrapper": {
-              "display": "grid",
-              "grid-template-columns": "1fr 1fr",
-              "gap": "30px",
-              "margin-bottom": "60px",
-              "@media (max-width: 992px)": {
-                "display": "block",
-                "margin-bottom": "0"
-              },
-              ".list-wrapper": {
-                "@media (max-width: 992px)": {
-                  "margin-bottom": "40px"
-                },
-                ".list": {
-                  "padding": "0",
-                  "margin": "0",
-                  "list-style-type": "none",
-                  "display": "inline-flex",
-                  "flex-direction": "column",
-                  ".item-wrap": {
-                    "display": "inline-block",
-                    "width": "fit-content",
-                    "position": "relative",
-                    "margin-bottom": "10px",
-                    "opacity": ".6",
-                    "cursor": "pointer",
-                    "&:last-child": {
+              ".content-wrapper": {
+                ".title-wrapper": {
+                  ".title-wrap": {
+                    "display": "inline-flex",
+                    "align-items": "center",
+                    "margin-bottom": "16px",
+                    "@media (max-width: 992px)": {
+                      "margin-bottom": "40px"
+                    },
+                    "img": {
+                      "width": "42px",
+                      "height": "42px",
+                      "object-fit": "contain",
+                      "margin-right": "1rem"
+                    },
+                    ".mbr-section-title": {
                       "margin-bottom": "0"
-                    },
-                    "&::before": {
-                      "content": "''",
-                      "position": "absolute",
-                      "bottom": "0",
-                      "left": "0",
-                      "height": "1px",
-                      "width": "0",
-                      "background-color": "@border",
-                      "transition": "all 0.3s ease-in-out",
-                      "opacity": ".6"
-                    },
-                    "&:focus, &:hover": {
-                      "&::before": {
-                        "width": "100%"
-                      }
                     }
+                  }
+                },
+                ".copyright": {
+                  "margin-bottom": "20px",
+                  "@media (max-width: 992px)": {
+                    "margin-bottom": "40px"
+                  }
+                }
+              },
+              ".social-wrapper": {
+                ".social-wrap": {
+                  "display": "inline-flex",
+                  "flex-wrap": "wrap",
+                  ".mbr-iconfont": {
+                    "font-size": "20px",
+                    "margin-right": "48px",
+                    "color": "@social"
                   }
                 }
               }
             },
-            ".border-wrap": {
-              "height": "1px",
-              "width": "100%",
-              "opacity": ".2",
-              "background-color": "@border"
-            },
-            ".copy-wrapper": {
-              ".mbr-copy": {
-                "padding": "30px 0 40px",
-                "margin-bottom": "0",
-                "opacity": ".4"
+            ".social-wrapper": {
+              ".social-wrap": {
+                "display": "inline-flex",
+                "flex-wrap": "wrap",
+                ".mbr-iconfont": {
+                  "font-size": "20px",
+                  "margin-right": "28px",
+                  "color": "@social"
+                }
               }
+            },
+            ".list-wrapper": {
+              ".mbr-card-title": {
+                "margin-bottom": "16px"
+              },
+              ".list": {
+                "margin": "0",
+                "padding": "0",
+                "list-style-type": "none",
+                ".item-wrap": {
+                  "margin-bottom": "16px"
+                },
+                "@media (max-width: 992px)": {
+                  "margin-bottom": "40px"
+                }
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#ffffff"
+            },
+            ".copyright": {
+              "color": "#ffffff"
+            },
+            ".mbr-card-title": {
+              "color": "#ffffff"
             },
             ".list": {
               "color": "#ffffff"
-            },
-            ".mbr-copy": {
-              "color": "#ffffff"
-            },
-            ".list, .item-wrap, .list-wrapper": {
-              "color": "#14287f"
             }
           },
-          "_name": "footer01",
-          "_sourceTheme": "placem5",
-          "_customHTML": "<section class=\"footer01 placem5\" group=\"Footer\" global once=\"footers\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"12\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"12\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Logo\" name=\"showLogo\" checked>\n        <input type=\"checkbox\" title=\"Social\" name=\"showSoc\" checked>\n        <input type=\"checkbox\" title=\"Contacts\" name=\"showContacts\" checked>\n        <input type=\"checkbox\" title=\"Border\" name=\"showBorder\" checked>\n        <input type=\"color\" title=\"Border Color\" value=\"#ffffff\" name=\"border\" selected>\n        <input type=\"checkbox\" title=\"Copyright\" name=\"showCopy\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/placem5/components/_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/placem5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n            <div class=\"col-12 col-lg-7\">\n                <div class=\"logo-wrapper\" mbr-if=\"showLogo\">\n                    <a href=\"#\"><img src=\"@PROJECT_PATH@/assets/images/screenshot-2024-06-15-at-19.22.25-2.webp\" alt=\"Mobirise\"></a>\n                </div>\n            </div>\n            <div class=\"col-lg-4\">\n                <div class=\"content-wrapper\" mbr-if=\"showContacts || showSoc\">\n                    <div class=\"list-wrapper\" mbr-if=\"showSoc\">\n                        <ul class=\"list mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".list, .item-wrap, .list-wrapper\" data-multiline mbr-article>\n                            <li class=\"item-wrap\"><b>Diensten</b></li>\n                            <li class=\"item-wrap\"><b>Over ons </b></li><li class=\"item-wrap\"><b>Offer<span style=\"font-size: 1.15rem;\">te</span></b></li>\n                        </ul>\n                    </div>\n                    <div class=\"list-wrapper\" mbr-if=\"showContacts\">\n                        <ul class=\"list mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".list, .item-wrap, .list-wrapper\" data-multiline mbr-article>\n                            <li class=\"item-wrap\">+31658947413</li><li class=\"item-wrap\">cleaningallinone@hotmail.com</li>\n                        </ul>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-12\">\n                <div class=\"border-wrap\" mbr-if=\"showBorder\"></div>\n            </div>\n            <div class=\"col-12 col-lg-11\">\n                <div class=\"copy-wrapper\">\n                    <p class=\"mbr-copy mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showCopy\" data-app-selector=\".mbr-copy, .logo-wrapper\">\n                        © Copyright 2030 Mobirise - All Rights Reserved\n                    </p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "ugZbiqSkSp",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [],
+          "_cid": "uh08g5thr6",
           "_protectedParams": [],
           "_global": true,
           "_once": "footers",
           "_params": {},
-          "_anchor": "footer01-k"
+          "_anchor": "footer2-13"
         }
       ]
     },
@@ -4229,7 +4215,9 @@
           "_params": {}
         },
         {
-          "alias": false,
+          "_name": "footer2",
+          "_sourceTheme": "tutorm5",
+          "_customHTML": "<section class=\"tutorm5 footer2\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n\t\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n\t\t<input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Logo\" name=\"showLogo\">\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Copyright\" name=\"showCopy\" checked>\n\t\t<header>Social</header>\n\t\t<input type=\"range\" name=\"socialCount\" title=\"Social Count\" min=\"0\" max=\"4\" step=\"1\" value=\"3\">\n\t\t<input type=\"color\" title=\"Social Color\" value=\"#ffffff\" name=\"social\" selected>\n\t\t<header>Lists</header>\n\t\t<input type=\"checkbox\" title=\"List Title\" name=\"showListTitle\" checked>\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#13287d\" selected>\n\t\t</fieldset>\n\t\t<header condition=\"bg.type === 'video'\">Fallback Image</header>\n\t\t<input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n\t</mbr-parameters>\n\n\t<div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n\t\t<div class=\"row\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n\t\t\t<div class=\"col-12 col-lg-4 card\">\n\t\t\t\t<div class=\"content-wrapper\">\n\t\t\t\t\t<div class=\"title-wrapper\" mbr-if=\"showLogo || showTitle\">\n\t\t\t\t\t\t<div class=\"title-wrap\">\n\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/screenshot_2024-06-15_at_19.22.25-2.webp\" alt=\"Mobirise\" mbr-if=\"showLogo\">\n\t\t\t\t\t\t\t<h2 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title, .title-wrapper, .social-wrapper\">All in one cleaning</h2>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p class=\"copyright mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showCopy\" data-app-selector=\".copyright\">Copyright 2024 All in one cleaning<br>All Rights Reserved\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\n\t\t\t</div>\n\t\t\t<div class=\"col-12 col-lg-4 col-md-6\">\n\t\t\t\t<div class=\"list-wrapper\">\n\t\t\t\t\t<h4 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showListTitle\" data-app-selector=\".mbr-card-title\"><b>Adres</b></h4>\n\t\t\t\t\t<ul class=\"list mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".list\" data-multiline mbr-article>\n\t\t\t\t\t\t<li class=\"item-wrap\">Het oosterveld 58</li><li class=\"item-wrap\">7544 EL, Enschede</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-12 col-lg-4 col-md-6\">\n\t\t\t\t<div class=\"list-wrapper\">\n\t\t\t\t\t<h4 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showListTitle\" data-app-selector=\".mbr-card-title\"><b>Contact</b></h4>\n\t\t\t\t\t<ul class=\"list mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".list\" data-multiline mbr-article>\n\t\t\t\t\t\t<li class=\"item-wrap\">cleaningallinone@hotmail.com</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"social-wrapper pt-1\">\n\t\t\t\t\t<div class=\"social-wrap\">\n\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-telegram socicon\" mbr-if=\"socialCount > 0\"></span>\n\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon socicon-twitter\" mbr-if=\"socialCount > 1\"></span>\n\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-vkontakte socicon\" mbr-if=\"socialCount > 2\"></span>\n\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon socicon-instagram\" mbr-if=\"socialCount > 3\"></span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\n\t\t</div>\n\t</div>\n</section>",
           "_styles": {
             "& when not (@fullScreen)": {
               "padding-top": "(@paddingTop * 1rem)",
@@ -4260,116 +4248,107 @@
               ".container-fluid": {
                 "padding": "0 40px",
                 "@media (max-width: 992px)": {
-                  "padding": "0 20px"
+                  "padding": "0 16px"
                 }
               }
             },
             ".container": {
               "@media (max-width: 992px)": {
-                "padding": "0 20px"
+                "padding": "0 16px"
               }
             },
-            ".row": {
-              "justify-content": "center"
-            },
-            ".logo-wrapper": {
-              "margin-bottom": "60px",
+            ".card": {
+              "display": "flex",
+              "flex-direction": "column",
+              "justify-content": "space-between",
               "@media (max-width: 992px)": {
                 "margin-bottom": "40px"
               },
-              "img": {
-                "display": "inline-flex",
-                "width": "200px",
-                "height": "75px",
-                "object-fit": "cover"
-              },
-              "a": {
-                "display": "inline-flex"
-              }
-            },
-            ".content-wrapper": {
-              "display": "grid",
-              "grid-template-columns": "1fr 1fr",
-              "gap": "30px",
-              "margin-bottom": "60px",
-              "@media (max-width: 992px)": {
-                "display": "block",
-                "margin-bottom": "0"
-              },
-              ".list-wrapper": {
-                "@media (max-width: 992px)": {
-                  "margin-bottom": "40px"
-                },
-                ".list": {
-                  "padding": "0",
-                  "margin": "0",
-                  "list-style-type": "none",
-                  "display": "inline-flex",
-                  "flex-direction": "column",
-                  ".item-wrap": {
-                    "display": "inline-block",
-                    "width": "fit-content",
-                    "position": "relative",
-                    "margin-bottom": "10px",
-                    "opacity": ".6",
-                    "cursor": "pointer",
-                    "&:last-child": {
+              ".content-wrapper": {
+                ".title-wrapper": {
+                  ".title-wrap": {
+                    "display": "inline-flex",
+                    "align-items": "center",
+                    "margin-bottom": "16px",
+                    "@media (max-width: 992px)": {
+                      "margin-bottom": "40px"
+                    },
+                    "img": {
+                      "width": "42px",
+                      "height": "42px",
+                      "object-fit": "contain",
+                      "margin-right": "1rem"
+                    },
+                    ".mbr-section-title": {
                       "margin-bottom": "0"
-                    },
-                    "&::before": {
-                      "content": "''",
-                      "position": "absolute",
-                      "bottom": "0",
-                      "left": "0",
-                      "height": "1px",
-                      "width": "0",
-                      "background-color": "@border",
-                      "transition": "all 0.3s ease-in-out",
-                      "opacity": ".6"
-                    },
-                    "&:focus, &:hover": {
-                      "&::before": {
-                        "width": "100%"
-                      }
                     }
+                  }
+                },
+                ".copyright": {
+                  "margin-bottom": "20px",
+                  "@media (max-width: 992px)": {
+                    "margin-bottom": "40px"
+                  }
+                }
+              },
+              ".social-wrapper": {
+                ".social-wrap": {
+                  "display": "inline-flex",
+                  "flex-wrap": "wrap",
+                  ".mbr-iconfont": {
+                    "font-size": "20px",
+                    "margin-right": "48px",
+                    "color": "@social"
                   }
                 }
               }
             },
-            ".border-wrap": {
-              "height": "1px",
-              "width": "100%",
-              "opacity": ".2",
-              "background-color": "@border"
-            },
-            ".copy-wrapper": {
-              ".mbr-copy": {
-                "padding": "30px 0 40px",
-                "margin-bottom": "0",
-                "opacity": ".4"
+            ".social-wrapper": {
+              ".social-wrap": {
+                "display": "inline-flex",
+                "flex-wrap": "wrap",
+                ".mbr-iconfont": {
+                  "font-size": "20px",
+                  "margin-right": "28px",
+                  "color": "@social"
+                }
               }
+            },
+            ".list-wrapper": {
+              ".mbr-card-title": {
+                "margin-bottom": "16px"
+              },
+              ".list": {
+                "margin": "0",
+                "padding": "0",
+                "list-style-type": "none",
+                ".item-wrap": {
+                  "margin-bottom": "16px"
+                },
+                "@media (max-width: 992px)": {
+                  "margin-bottom": "40px"
+                }
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#ffffff"
+            },
+            ".copyright": {
+              "color": "#ffffff"
+            },
+            ".mbr-card-title": {
+              "color": "#ffffff"
             },
             ".list": {
               "color": "#ffffff"
-            },
-            ".mbr-copy": {
-              "color": "#ffffff"
-            },
-            ".list, .item-wrap, .list-wrapper": {
-              "color": "#14287f"
             }
           },
-          "_name": "footer01",
-          "_sourceTheme": "placem5",
-          "_customHTML": "<section class=\"footer01 placem5\" group=\"Footer\" global once=\"footers\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"12\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"12\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Logo\" name=\"showLogo\" checked>\n        <input type=\"checkbox\" title=\"Social\" name=\"showSoc\" checked>\n        <input type=\"checkbox\" title=\"Contacts\" name=\"showContacts\" checked>\n        <input type=\"checkbox\" title=\"Border\" name=\"showBorder\" checked>\n        <input type=\"color\" title=\"Border Color\" value=\"#ffffff\" name=\"border\" selected>\n        <input type=\"checkbox\" title=\"Copyright\" name=\"showCopy\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/placem5/components/_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/placem5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n            <div class=\"col-12 col-lg-7\">\n                <div class=\"logo-wrapper\" mbr-if=\"showLogo\">\n                    <a href=\"#\"><img src=\"@PROJECT_PATH@/assets/images/screenshot-2024-06-15-at-19.22.25-2.webp\" alt=\"Mobirise\"></a>\n                </div>\n            </div>\n            <div class=\"col-lg-4\">\n                <div class=\"content-wrapper\" mbr-if=\"showContacts || showSoc\">\n                    <div class=\"list-wrapper\" mbr-if=\"showSoc\">\n                        <ul class=\"list mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".list, .item-wrap, .list-wrapper\" data-multiline mbr-article>\n                            <li class=\"item-wrap\"><b>Diensten</b></li>\n                            <li class=\"item-wrap\"><b>Over ons </b></li><li class=\"item-wrap\"><b>Offer<span style=\"font-size: 1.15rem;\">te</span></b></li>\n                        </ul>\n                    </div>\n                    <div class=\"list-wrapper\" mbr-if=\"showContacts\">\n                        <ul class=\"list mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".list, .item-wrap, .list-wrapper\" data-multiline mbr-article>\n                            <li class=\"item-wrap\">+31658947413</li><li class=\"item-wrap\">cleaningallinone@hotmail.com</li>\n                        </ul>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-12\">\n                <div class=\"border-wrap\" mbr-if=\"showBorder\"></div>\n            </div>\n            <div class=\"col-12 col-lg-11\">\n                <div class=\"copy-wrapper\">\n                    <p class=\"mbr-copy mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showCopy\" data-app-selector=\".mbr-copy, .logo-wrapper\">\n                        © Copyright 2030 Mobirise - All Rights Reserved\n                    </p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "ugZbiqSkSp",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [],
-          "_anchor": "footer01-s",
+          "_cid": "uh08g5thr6",
           "_protectedParams": [],
           "_global": true,
           "_once": "footers",
-          "_params": {}
+          "_params": {},
+          "_anchor": "footer2-13"
         }
       ]
     },
@@ -5266,149 +5245,6 @@
                 "background-image": "url(@fallBackImage)"
               }
             },
-            "& when (@fullWidth)": {
-              ".container-fluid": {
-                "padding": "0 40px",
-                "@media (max-width: 992px)": {
-                  "padding": "0 20px"
-                }
-              }
-            },
-            ".container": {
-              "@media (max-width: 992px)": {
-                "padding": "0 20px"
-              }
-            },
-            ".row": {
-              "justify-content": "center"
-            },
-            ".logo-wrapper": {
-              "margin-bottom": "60px",
-              "@media (max-width: 992px)": {
-                "margin-bottom": "40px"
-              },
-              "img": {
-                "display": "inline-flex",
-                "width": "200px",
-                "height": "75px",
-                "object-fit": "cover"
-              },
-              "a": {
-                "display": "inline-flex"
-              }
-            },
-            ".content-wrapper": {
-              "display": "grid",
-              "grid-template-columns": "1fr 1fr",
-              "gap": "30px",
-              "margin-bottom": "60px",
-              "@media (max-width: 992px)": {
-                "display": "block",
-                "margin-bottom": "0"
-              },
-              ".list-wrapper": {
-                "@media (max-width: 992px)": {
-                  "margin-bottom": "40px"
-                },
-                ".list": {
-                  "padding": "0",
-                  "margin": "0",
-                  "list-style-type": "none",
-                  "display": "inline-flex",
-                  "flex-direction": "column",
-                  ".item-wrap": {
-                    "display": "inline-block",
-                    "width": "fit-content",
-                    "position": "relative",
-                    "margin-bottom": "10px",
-                    "opacity": ".6",
-                    "cursor": "pointer",
-                    "&:last-child": {
-                      "margin-bottom": "0"
-                    },
-                    "&::before": {
-                      "content": "''",
-                      "position": "absolute",
-                      "bottom": "0",
-                      "left": "0",
-                      "height": "1px",
-                      "width": "0",
-                      "background-color": "@border",
-                      "transition": "all 0.3s ease-in-out",
-                      "opacity": ".6"
-                    },
-                    "&:focus, &:hover": {
-                      "&::before": {
-                        "width": "100%"
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            ".border-wrap": {
-              "height": "1px",
-              "width": "100%",
-              "opacity": ".2",
-              "background-color": "@border"
-            },
-            ".copy-wrapper": {
-              ".mbr-copy": {
-                "padding": "30px 0 40px",
-                "margin-bottom": "0",
-                "opacity": ".4"
-              }
-            },
-            ".list": {
-              "color": "#ffffff"
-            },
-            ".mbr-copy": {
-              "color": "#ffffff"
-            },
-            ".list, .item-wrap, .list-wrapper": {
-              "color": "#14287f"
-            }
-          },
-          "_name": "footer01",
-          "_sourceTheme": "placem5",
-          "_customHTML": "<section class=\"footer01 placem5\" group=\"Footer\" global once=\"footers\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"12\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"12\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Logo\" name=\"showLogo\" checked>\n        <input type=\"checkbox\" title=\"Social\" name=\"showSoc\" checked>\n        <input type=\"checkbox\" title=\"Contacts\" name=\"showContacts\" checked>\n        <input type=\"checkbox\" title=\"Border\" name=\"showBorder\" checked>\n        <input type=\"color\" title=\"Border Color\" value=\"#ffffff\" name=\"border\" selected>\n        <input type=\"checkbox\" title=\"Copyright\" name=\"showCopy\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/placem5/components/_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/placem5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n            <div class=\"col-12 col-lg-7\">\n                <div class=\"logo-wrapper\" mbr-if=\"showLogo\">\n                    <a href=\"#\"><img src=\"@PROJECT_PATH@/assets/images/screenshot-2024-06-15-at-19.22.25-2.webp\" alt=\"Mobirise\"></a>\n                </div>\n            </div>\n            <div class=\"col-lg-4\">\n                <div class=\"content-wrapper\" mbr-if=\"showContacts || showSoc\">\n                    <div class=\"list-wrapper\" mbr-if=\"showSoc\">\n                        <ul class=\"list mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".list, .item-wrap, .list-wrapper\" data-multiline mbr-article>\n                            <li class=\"item-wrap\"><b>Diensten</b></li>\n                            <li class=\"item-wrap\"><b>Over ons </b></li><li class=\"item-wrap\"><b>Offer<span style=\"font-size: 1.15rem;\">te</span></b></li>\n                        </ul>\n                    </div>\n                    <div class=\"list-wrapper\" mbr-if=\"showContacts\">\n                        <ul class=\"list mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".list, .item-wrap, .list-wrapper\" data-multiline mbr-article>\n                            <li class=\"item-wrap\">+31658947413</li><li class=\"item-wrap\">cleaningallinone@hotmail.com</li>\n                        </ul>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-12\">\n                <div class=\"border-wrap\" mbr-if=\"showBorder\"></div>\n            </div>\n            <div class=\"col-12 col-lg-11\">\n                <div class=\"copy-wrapper\">\n                    <p class=\"mbr-copy mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showCopy\" data-app-selector=\".mbr-copy, .logo-wrapper\">\n                        © Copyright 2030 Mobirise - All Rights Reserved\n                    </p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "ugZbiqSkSp",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [],
-          "_anchor": "footer01-x",
-          "_protectedParams": [],
-          "_global": true,
-          "_once": "footers",
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 1rem)",
-              "padding-bottom": "(@paddingBottom * 1rem)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = 'video')": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
             ".mbr-section-title": {
               "color": "#ffffff"
             },
@@ -5534,6 +5370,142 @@
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "_name": "footer2",
+          "_sourceTheme": "tutorm5",
+          "_customHTML": "<section class=\"tutorm5 footer2\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n\t\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n\t\t<input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Logo\" name=\"showLogo\">\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Copyright\" name=\"showCopy\" checked>\n\t\t<header>Social</header>\n\t\t<input type=\"range\" name=\"socialCount\" title=\"Social Count\" min=\"0\" max=\"4\" step=\"1\" value=\"3\">\n\t\t<input type=\"color\" title=\"Social Color\" value=\"#ffffff\" name=\"social\" selected>\n\t\t<header>Lists</header>\n\t\t<input type=\"checkbox\" title=\"List Title\" name=\"showListTitle\" checked>\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#13287d\" selected>\n\t\t</fieldset>\n\t\t<header condition=\"bg.type === 'video'\">Fallback Image</header>\n\t\t<input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n\t</mbr-parameters>\n\n\t<div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n\t\t<div class=\"row\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n\t\t\t<div class=\"col-12 col-lg-4 card\">\n\t\t\t\t<div class=\"content-wrapper\">\n\t\t\t\t\t<div class=\"title-wrapper\" mbr-if=\"showLogo || showTitle\">\n\t\t\t\t\t\t<div class=\"title-wrap\">\n\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/screenshot_2024-06-15_at_19.22.25-2.webp\" alt=\"Mobirise\" mbr-if=\"showLogo\">\n\t\t\t\t\t\t\t<h2 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title, .title-wrapper, .social-wrapper\">All in one cleaning</h2>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<p class=\"copyright mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showCopy\" data-app-selector=\".copyright\">Copyright 2024 All in one cleaning<br>All Rights Reserved\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\n\t\t\t</div>\n\t\t\t<div class=\"col-12 col-lg-4 col-md-6\">\n\t\t\t\t<div class=\"list-wrapper\">\n\t\t\t\t\t<h4 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showListTitle\" data-app-selector=\".mbr-card-title\"><b>Adres</b></h4>\n\t\t\t\t\t<ul class=\"list mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".list\" data-multiline mbr-article>\n\t\t\t\t\t\t<li class=\"item-wrap\">Het oosterveld 58</li><li class=\"item-wrap\">7544 EL, Enschede</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-12 col-lg-4 col-md-6\">\n\t\t\t\t<div class=\"list-wrapper\">\n\t\t\t\t\t<h4 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showListTitle\" data-app-selector=\".mbr-card-title\"><b>Contact</b></h4>\n\t\t\t\t\t<ul class=\"list mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".list\" data-multiline mbr-article>\n\t\t\t\t\t\t<li class=\"item-wrap\">cleaningallinone@hotmail.com</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"social-wrapper pt-1\">\n\t\t\t\t\t<div class=\"social-wrap\">\n\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-telegram socicon\" mbr-if=\"socialCount > 0\"></span>\n\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon socicon-twitter\" mbr-if=\"socialCount > 1\"></span>\n\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-vkontakte socicon\" mbr-if=\"socialCount > 2\"></span>\n\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon socicon-instagram\" mbr-if=\"socialCount > 3\"></span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\n\t\t</div>\n\t</div>\n</section>",
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            "& when (@fullWidth)": {
+              ".container-fluid": {
+                "padding": "0 40px",
+                "@media (max-width: 992px)": {
+                  "padding": "0 16px"
+                }
+              }
+            },
+            ".container": {
+              "@media (max-width: 992px)": {
+                "padding": "0 16px"
+              }
+            },
+            ".card": {
+              "display": "flex",
+              "flex-direction": "column",
+              "justify-content": "space-between",
+              "@media (max-width: 992px)": {
+                "margin-bottom": "40px"
+              },
+              ".content-wrapper": {
+                ".title-wrapper": {
+                  ".title-wrap": {
+                    "display": "inline-flex",
+                    "align-items": "center",
+                    "margin-bottom": "16px",
+                    "@media (max-width: 992px)": {
+                      "margin-bottom": "40px"
+                    },
+                    "img": {
+                      "width": "42px",
+                      "height": "42px",
+                      "object-fit": "contain",
+                      "margin-right": "1rem"
+                    },
+                    ".mbr-section-title": {
+                      "margin-bottom": "0"
+                    }
+                  }
+                },
+                ".copyright": {
+                  "margin-bottom": "20px",
+                  "@media (max-width: 992px)": {
+                    "margin-bottom": "40px"
+                  }
+                }
+              },
+              ".social-wrapper": {
+                ".social-wrap": {
+                  "display": "inline-flex",
+                  "flex-wrap": "wrap",
+                  ".mbr-iconfont": {
+                    "font-size": "20px",
+                    "margin-right": "48px",
+                    "color": "@social"
+                  }
+                }
+              }
+            },
+            ".social-wrapper": {
+              ".social-wrap": {
+                "display": "inline-flex",
+                "flex-wrap": "wrap",
+                ".mbr-iconfont": {
+                  "font-size": "20px",
+                  "margin-right": "28px",
+                  "color": "@social"
+                }
+              }
+            },
+            ".list-wrapper": {
+              ".mbr-card-title": {
+                "margin-bottom": "16px"
+              },
+              ".list": {
+                "margin": "0",
+                "padding": "0",
+                "list-style-type": "none",
+                ".item-wrap": {
+                  "margin-bottom": "16px"
+                },
+                "@media (max-width: 992px)": {
+                  "margin-bottom": "40px"
+                }
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#ffffff"
+            },
+            ".copyright": {
+              "color": "#ffffff"
+            },
+            ".mbr-card-title": {
+              "color": "#ffffff"
+            },
+            ".list": {
+              "color": "#ffffff"
+            }
+          },
+          "_cid": "uh08g5thr6",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footers",
+          "_params": {},
+          "_anchor": "footer2-13"
         }
       ]
     }
